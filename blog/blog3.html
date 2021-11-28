@@ -55,21 +55,25 @@
         <div class="flex flex-col w-full mx-auto mb-2 prose text-left prose-md">
           <div class="mb-5 border-b border-gray-200">
             <div class="flex flex-wrap items-baseline -mt-2">
-              <h5>12-03-2021</h5>
-              <p class="mt-1 ml-2">Transitions</p>
+              <h5>30-06-2021</h5>
+              <p class="mt-1 ml-2">The Align Library.</p>
             </div>
           </div>
           <div class="aspect-w-16 aspect-h-9 mx-auto my-5">
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/ipp-pNRIp4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/dQXLyeVQrMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-                <h1 class="mb-2 text-4xl font-extrabold leading-snug tracking-tight text-gray-800 md:text-5xl text-gray-900 hover:text-purple-700"> Sequence Alignment and the Smith-Waterman Algorithm. </h1>
-          <p  class="mb-4 text-base font-normal text-gray-600"> Through the lens of a set of certitudes based on deductions founded on false premise. </p>
-          <p  class="mb-4 text-base font-normal text-gray-600"> Turd polishing put a record on and see who dances, dog and pony show, nor one-sheet. Ensure to follow requirements when developing solutions three-martini lunch, that jerk from finance really threw me under the bus. Bob called an all-hands this afternoon. </p>
-          <p  class="mb-4 text-base font-normal text-gray-600"> We've got kpis for that this is a no-brainer viral engagement pixel pushing. Run it up the flagpole please use "solutionise" instead of solution ideas! :) dunder mifflin form without content style without meaning target rich environment. Three-martini lunch. Get buy-in prioritize these line items, or deliverables yet back to the drawing-board let's put a pin in that, close the loop. Manage expectations product market fit win-win-win. The horse is out of the barn poop, but can you put it on my calendar? but drink from the firehose, but quick-win. </p>
-          <h1 class="mb-2 text-lg font-extrabold leading-snug tracking-tight text-gray-800 md:text-lg text-gray-900 hover:text-purple-700">"Focus on the customer journey"</h1>
-          <p  class="mb-4 text-base font-normal text-gray-600"> If you could do that, that would be great this is a no-brainer, or Q1 regroup. Groom the backlog what do you feel you would bring to the table if you were hired for this position. Back of the net. Scope creep can you slack it to me? shotgun approach build on a culture of contribution and inclusion please advise soonest. </p>
-          <h3 class="mb-2 text-md font-extrabold leading-snug tracking-tight text-gray-800 md:text-md text-gray-900 hover:text-purple-700">Is a no-brainer, or Q1 regroup.</h3>
-          <p  class="mb-4 text-base font-normal text-gray-600"> Gain traction make it more corporate please we need to harvest synergy effects not enough bandwidth, and we want to empower the team with the right tools and guidance to uplevel our craft and build better nor low-hanging fruit the right info at the right time to the right people. </p>
+                <h1 class="mb-2 text-4xl font-extrabold leading-snug tracking-tight text-gray-800 md:text-5xl text-gray-900 hover:text-purple-700"> Sequence Alignment and Smith-Waterman's Contribution. </h1>
+           <p  class="mb-4 text-base font-normal text-gray-600"> In 1970, Saul B. Needleman and Christian D. Wunsch proposed a heuristic homology algorithm for sequence alignment, also referred to as the Needleman–Wunsch algorithm.It is a global alignment algorithm that requires {\displaystyle O(mn)}O(mn) calculation steps ({\displaystyle m}m and {\displaystyle n}n are the lengths of the two sequences being aligned). It uses the iterative calculation of a matrix for the purpose of showing global alignment. </p>
+          <p  class="mb-4 text-base font-normal text-gray-600"> In recent years, genome projects conducted on a variety of organisms generated massive amounts of sequence data for genes and proteins, which requires computational analysis. Sequence alignment shows the relations between genes or between proteins, leading to a better understanding of their homology and functionality.</p>
+          <p  class="mb-4 text-base font-normal text-gray-600"> Smith–Waterman algorithm aligns two sequences by matches/mismatches (also known as substitutions), insertions, and deletions. Both insertions and deletions are the operations that introduce gaps, which are represented by dashes. </p>
+          <h1 class="mb-2 text-lg font-extrabold leading-snug tracking-tight text-gray-800 md:text-lg text-gray-900 hover:text-purple-700">Steps - </h1>
+          <p  class="mb-4 text-base font-normal text-gray-600">Determine the substitution matrix and the gap penalty scheme. A substitution matrix assigns each pair of bases or amino acids a score for match or mismatch. Usually matches get positive scores, whereas mismatches get relatively lower scores. A gap penalty function determines the score cost for opening or extending gaps. It is suggested that users choose the appropriate scoring system based on the goals. In addition, it is also a good practice to try different combinations of substitution matrices and gap penalties.
+Initialize the scoring matrix. The dimensions of the scoring matrix are 1 + length of each sequence respectively. All the elements of the first row and the first column are set to 0. The extra first row and first column make it possible to align one sequence to another at any position, and setting them to 0 makes the terminal gap free from penalty.
+Scoring. </p>
+          <h3 class="mb-2 text-md font-extrabold leading-snug tracking-tight text-gray-800 md:text-md text-gray-900 hover:text-purple-700"></h3>
+          <p  class="mb-4 text-base font-normal text-gray-600">Score each element from left to right, top to bottom in the matrix, considering the outcomes of substitutions (diagonal scores) or adding gaps (horizontal and vertical scores). If none of the scores are positive, this element gets a 0. Otherwise the highest score is used and the source of that score is recorded.
+Traceback. </p>
+<p  class="mb-4 text-base font-normal text-gray-600">Starting at the element with the highest score, traceback based on the source of each score recursively, until 0 is encountered. The segments that have the highest similarity score based on the given scoring system is generated in this process. To obtain the second best local alignment, apply the traceback process starting at the second highest score outside the trace of the best alignment.</p>
         </div>
       </div>
     
